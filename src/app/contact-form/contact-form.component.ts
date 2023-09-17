@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,4 +8,49 @@ import { Component } from '@angular/core';
 })
 export class ContactFormComponent {
 
+  name: any;
+  email: any;
+  message: any;
+  isSending: any;
+  sendingOk: any;
+
+ 
+  
+    async sendMail(){
+      this.isSending = true;
+
+      let data = new FormData();
+      data.append('name', this.name);
+      data.append('email', this.email);
+      data.append('message', this.message);
+      await fetch('', {
+      method: 'POST',
+           body: data
+       })
+      this.cleanInputs()
+      setTimeout(() => {
+        this.isSending = false;
+        this.finishSending()
+      }, 2000);
+    }
+    finishSending(){
+      this.sendingOk = true;
+      setTimeout(() => {
+        this.sendingOk = false;
+      }, 3000);
+    }
+
+    cleanInputs(){
+      this.name = '';
+      this.email = '';
+      this.message = '';
+    }
+
+    scrollToTarget(target: string) {
+      const element = document.getElementById(target);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+ 
 }

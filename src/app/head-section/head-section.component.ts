@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./head-section.component.scss']
 })
 export class HeadSectionComponent {
+  constructor() {}
 
+  scrollToTarget(target: string) {
+    const element = document.getElementById(target);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

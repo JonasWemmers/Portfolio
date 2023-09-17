@@ -1,0 +1,248 @@
+.myWork{
+    width: 80%;
+    margin: 0 10%;
+    h2{
+        font-size: 80px;
+        margin-top: 100px;
+        font-weight: 600;
+        line-height: 1;
+        color: #5988FF;
+        font-family: Baloo;
+    }
+    span{
+        font-size: 20px;
+    }
+}
+.project{
+    display: flex;
+    align-items: flex-end;
+    gap: 180px;
+    z-index: 2;
+    margin-top: 100px;
+    .textBlock{
+        display: flex;
+        flex-direction: column;
+      
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 30px;
+            #name{
+                font-size: 50px;
+                font-weight: 600;
+                color: #5988FF;
+            }
+            #tec{
+                font-size: 30px;
+                color:rgb(97, 132, 247) ;
+            }
+            #description{
+                font-size: 20px;
+            }
+        }
+        .btn{
+           display: flex;
+           gap: 20px;
+            button{ 
+                height: 60px;
+                width: 120px;
+                border: 1px solid black;
+                border-radius: 10px;
+                background-color: transparent;
+                font-size: 20px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 125ms ease-out;
+                transform: scale(1);
+                &:hover{
+                    transition: all 125ms ease-out;
+                    transform: scale(1.1);
+                    background: -webkit-linear-gradient(0deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+                    background: linear-gradient(-50deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%); 
+                    border: #184aff;
+                    color: white;
+                }
+            }
+        }
+    }
+    img{
+        width: 40vw;
+    }
+    
+}
+
+
+.project-join{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    gap: 180px;
+    z-index: 2;
+    margin-top: 200px;
+    .textBlock{
+        display: flex;
+        flex-direction: column;
+      
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 30px;
+            #name{
+                font-size: 50px;
+                font-weight: 600;
+                color: #5988FF;
+            }
+            #tec{
+                font-size: 30px;
+                color:rgb(97, 132, 247) ;
+            }
+            #description{
+                font-size: 20px;
+            }
+        }
+        .btn{
+           display: flex;
+           gap: 20px;
+            button{ 
+                height: 60px;
+                width: 120px;
+                border: 1px solid black;
+                border-radius: 10px;
+                background-color: transparent;
+                font-size: 20px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 125ms ease-out;
+                transform: scale(1);
+                &:hover{
+                    transition: all 125ms ease-out;
+                    transform: scale(1.1);
+                    background: -webkit-linear-gradient(0deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+                    background: linear-gradient(-50deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%); 
+                    border: #184aff;
+                    color: white;
+                }
+            }
+        }
+    }
+    img{
+        width: 40vw;
+        z-index: 2;
+    }
+    
+}
+
+.flip{
+    flex-direction: row-reverse;
+}
+.flipSide{
+   align-items: flex-end;
+    text-align: end;
+}
+@media ( max-width: 900px){
+    .project{
+        
+        flex-direction: column;
+        align-items: center;
+       
+        margin: 80px 0;
+        .textBlock{
+            align-items: center;
+            .text{
+               align-items: center;
+                #name{
+                    font-size:40px;
+                  
+                }
+                #tec{
+                    font-size: 20px;
+                  
+                }
+                #description{
+                    font-size: 15px;
+                }
+            }
+           
+        }
+        img{
+            width: 80vw;
+        }
+        
+    }
+    .flip{
+        flex-direction: column;
+    }
+    .flipSide{
+       align-items: center;
+        text-align: unset;
+    }
+}
+@media ( max-width: 700px){
+    .myWork{
+       
+        h2{
+            font-size: 40px;
+            
+        }
+       
+    }
+}
+
+.imgBg1{
+    position: absolute;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    top: 2250px;
+    left: 500px;
+    
+    background: #184aff;
+    background: -webkit-linear-gradient(0deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+    background: linear-gradient(-50deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+}
+
+
+.imgBg2{
+    position: absolute;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    top: 2300px;
+    left: 1100px;
+    
+    background: #184aff;
+    background: -webkit-linear-gradient(0deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+    background: linear-gradient(-50deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+}
+
+
+.imgBg3{
+    position: absolute;
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    top: 2700px;
+    left: 0px;
+    z-index: 0;
+    
+    background: #184aff;
+    background: -webkit-linear-gradient(0deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+    background: linear-gradient(-50deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+}
+
+
+.imgBg4{
+    position: absolute;
+    height: 80vh;
+    width: 80vh;
+    border-radius: 50%;
+    top: 3000px;
+    left: 1100px;
+    z-index: 0;
+    
+    background: #184aff;
+    background: -webkit-linear-gradient(0deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+    background: linear-gradient(-50deg, #184aff 0%, rgba(66, 139, 255, 0.84) 100%);
+}

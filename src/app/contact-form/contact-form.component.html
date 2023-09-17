@@ -1,1 +1,23 @@
-<p>contact-form works!</p>
+<div class="contactForm">
+    <div class="imgBg1"></div>
+    <div (click)="scrollToTarget('headSection')" class="upBtn"><img src="assets/img/Go up button s2.png"></div>
+    <h2>Contact</h2>
+    <div class="formBlock">
+        <div class="text" >
+            <span id="topLine">Got a problem to solve?</span>
+            <span  id="description">Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</span>
+            <span id="bottomLine">Need a Frontend developer? <b>Contact me!</b></span>
+        </div>
+        <div class="formArea">
+            <form ngNativeValidate class="text center" (submit)="sendMail()" id="contactForm" >
+                <input type="text" required  placeholder="Your name" name="name" id="name" >
+                <input type="text" required placeholder="Your email" name="email" id="email">
+                <textarea placeholder="Your message" required name="message" id="message" cols="30" rows="10"></textarea>
+                <button type="submit" *ngIf="!isSending && !sendingOk" id="btn">Say hello :)</button>
+                <button  *ngIf="sendingOk" id="btn-blue">Thank`s for your mail</button>
+                <button [disabled]="isSending" class="dots-bounce" style="background-color: rgb(97, 132, 247)" *ngIf="isSending" id="btn"></button>
+            </form>
+            
+        </div>
+    </div>
+</div>
