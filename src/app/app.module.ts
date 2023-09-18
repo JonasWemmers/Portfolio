@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PopupMenuComponent } from './popup-menu/popup-menu.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MainPageComponent } from './main-page/main-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: HeadSectionComponent },
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     ContactFormComponent,
     FooterComponent,
     PopupMenuComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
