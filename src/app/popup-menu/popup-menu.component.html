@@ -1,1 +1,10 @@
-<p>popup-menu works!</p>
+<img class="menuIcon" src="assets/img/SimpleLineIconsMenu.svg" (click)="toggleMenu()">
+<div class="popupMenu" [ngClass]="{'showMenu': isOpen}">
+    <a (click)="scrollToTarget('aboutMe'); toggleMenu()">About me</a>
+    <a (click)="scrollToTarget('skillset'); toggleMenu()">Skill set</a>
+    <a (click)="scrollToTarget('projects'); toggleMenu()">My work</a>
+    <a (click)="scrollToTarget('contact'); toggleMenu()">Contact</a>
+    <img class="icons" (click)="link('https://github.com/JonasWemmers'); toggleMenu()" src="assets/img/GitHub_blue.png">
+    <img class="icons" (click)="scrollToTarget('contact'); toggleMenu()" src="assets/img/E-Mail_blue.png">
+    <img class="icons" (click)="link('https://www.linkedin.com/in/jonas-wemmers-a34083142/'); toggleMenu()" src="assets/img/LinkedIn_blue.png">
+</div>

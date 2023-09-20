@@ -133,9 +133,16 @@
     }
 }
 @media (max-width: 1000px){
+
     .hideMobile{
         display: none !important;
     }
+
+    .imgBg{
+        height: 70vh;
+         width: 70vh;
+    }
+
     .herosection{
         .portrait{
         height: 70vh;
@@ -156,6 +163,7 @@
     
 }
 @media (max-width: 550px){
+
     .herosection{
         .portrait{
         height: 120vw;
@@ -171,4 +179,18 @@
         }
     }
     
+}
+
+@media (max-width: 474px){
+
+    .tagline{
+        span{
+            color: white; 
+        }
+    }
+
+    .imgBg{
+        height: 90vh;
+         width: 90vh;
+    }
 }

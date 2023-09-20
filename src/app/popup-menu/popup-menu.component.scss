@@ -1,0 +1,38 @@
+.menuIcon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 11;
+    cursor: pointer;
+}
+.popupMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    background-color: rgba(175, 175, 175, 0.466);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 125ms ease-in-out;
+    opacity: 0;
+    a{
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    img{
+        cursor: pointer;
+        height: 50px;
+    }
+}
+.showMenu{
+
+    
+    opacity: 1 !important;
+}

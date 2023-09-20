@@ -13,6 +13,9 @@ import { PopupMenuComponent } from './popup-menu/popup-menu.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
+import { CommonModule } from '@angular/common';
+
+
 
 const appRoutes: Routes = [
   { path: '', component: HeadSectionComponent },
@@ -39,6 +42,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes) // Hier füge die RouterModule-Konfiguration hinzu
