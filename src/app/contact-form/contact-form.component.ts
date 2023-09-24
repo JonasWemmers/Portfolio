@@ -23,7 +23,7 @@ export class ContactFormComponent {
       data.append('name', this.name);
       data.append('email', this.email);
       data.append('message', this.message);
-      await fetch('', {
+      await fetch('https://jonas-wemmers.developerakademie.net/send_mail/send_mail.php', {
       method: 'POST',
            body: data
        })

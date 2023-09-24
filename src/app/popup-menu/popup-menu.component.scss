@@ -35,3 +35,14 @@
 .showMenu{
     opacity: 1 !important;
 }
+
+@media (min-width: 1000px){
+
+    .menuIcon{
+        display: none !important;
+    }
+
+    .popupMenu{
+        display: none !important;
+    }
+}    
