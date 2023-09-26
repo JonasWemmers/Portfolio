@@ -1,4 +1,4 @@
-.menuIcon{
+.menuIcon {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -6,8 +6,8 @@
     cursor: pointer;
 }
 
-.popupMenu{
-    display: flex;
+.popupMenu {
+    display: none; /* Standardmäßig ausblenden */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -22,27 +22,36 @@
     bottom: 0;
     transition: all 125ms ease-in-out;
     opacity: 0;
-    a{
+    
+    a {
         cursor: pointer;
         font-weight: 600;
         font-size: 20px;
     }
-    img{
+
+    img {
         cursor: pointer;
         height: 50px;
     }
 }
-.showMenu{
+
+.popupMenu.showMenu {
+    display: flex !important; /* Bei isOpen auf 'flex' ändern */
     opacity: 1 !important;
 }
 
-@media (min-width: 1000px){
-
-    .menuIcon{
-        display: none !important;
+@media (min-width: 1000px) {
+    .menuIcon {
+        display: none !important; /* Bei breiterem Bildschirm ausblenden */
     }
 
-    .popupMenu{
-        display: none !important;
+    .popupMenu {
+        display: none !important; /* Bei breiterem Bildschirm ausblenden */
     }
-}    
+}
+
+@media (max-width: 474px) {
+    .menuIcon {
+        filter: invert(100%);
+    }
+}

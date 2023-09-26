@@ -13,10 +13,11 @@ export class MyWorkComponent {
 
   ToGitHubElPoloLoco() {
     // Hier die URL deiner Facebook-Seite eintragen
-    const githubUrl = 'https://github.com/JonasWemmers';
+    const githubUrl = 'https://github.com/JonasWemmers/ElPolloLoco';
     
     // Die Facebook-Seite aufrufen
-    window.location.href = githubUrl;
+    window.open(githubUrl, '_blank');
+
   }
 
   redirectToLiveElPoloLoco() {
@@ -24,16 +25,19 @@ export class MyWorkComponent {
     const githubUrl = 'https://jonas-wemmers.developerakademie.net/ElPolloLoco/index.html';
     
     // Die Facebook-Seite aufrufen
-    window.location.href = githubUrl;
+    window.open(githubUrl, '_blank');
+
+    
   }
 
 
   ToGitHubJOIN() {
     // Hier die URL deiner Facebook-Seite eintragen
-    const githubUrl = 'https://github.com/JonasWemmers';
+    const githubUrl = 'https://github.com/JonasWemmers/JOIN';
     
     // Die Facebook-Seite aufrufen
-    window.location.href = githubUrl;
+    window.open(githubUrl, '_blank');
+
   }
 
   redirectToLiveJOIN() {
@@ -41,6 +45,6 @@ export class MyWorkComponent {
     const githubUrl = 'https://jonas-wemmers.developerakademie.net/JOIN_Kanban/index.html';
     
     // Die Facebook-Seite aufrufen
-    window.location.href = githubUrl;
+    window.open(githubUrl, '_blank');
   }
 }

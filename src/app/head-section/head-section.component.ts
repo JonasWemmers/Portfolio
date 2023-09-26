@@ -19,9 +19,9 @@ export class HeadSectionComponent {
     // Hier die URL deiner Facebook-Seite eintragen
     const githubUrl = 'https://github.com/JonasWemmers';
     
-    // Die Facebook-Seite aufrufen
-    window.location.href = githubUrl;
-  }
+    // Die GitHub-Seite in einem neuen Tab öffnen
+    window.open(githubUrl, '_blank');
+}
 
   sendEmail() {
     // Hier deine E-Mail-Adresse eintragen
@@ -36,6 +36,6 @@ export class HeadSectionComponent {
     const linkedInUrl = 'https://www.linkedin.com/in/jonas-wemmers-a34083142/';
     
     // Die LinkedIn-Seite aufrufen
-    window.location.href = linkedInUrl;
+    window.open(linkedInUrl, '_blank');
   }
 }

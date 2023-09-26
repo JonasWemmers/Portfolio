@@ -1,5 +1,5 @@
-import { Component  } from '@angular/core';
-import { timeout } from 'rxjs';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,50 +7,55 @@ import { timeout } from 'rxjs';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
+  name: string = '';
+  email: string = '';
+  message: string = '';
+  isSending: boolean = false;
+  sendingOk: boolean = false;
 
-  name: any;
-  email: any;
-  message: any;
-  isSending: any;
-  sendingOk: any;
+  async sendMail() {
+    this.isSending = true;
 
- 
-  
-    async sendMail(){
-      this.isSending = true;
+    let data = new FormData();
+    data.append('name', this.name);
+    data.append('email', this.email);
+    data.append('message', this.message);
 
-      let data = new FormData();
-      data.append('name', this.name);
-      data.append('email', this.email);
-      data.append('message', this.message);
-      await fetch('https://jonas-wemmers.developerakademie.net/send_mail/send_mail.php', {
-      method: 'POST',
-           body: data
-       })
-      this.cleanInputs()
-      setTimeout(() => {
-        this.isSending = false;
-        this.finishSending()
-      }, 2000);
-    }
-    finishSending(){
-      this.sendingOk = true;
-      setTimeout(() => {
-        this.sendingOk = false;
-      }, 3000);
-    }
+    try {
+      const response = await fetch('https://jonas-wemmers.developerakademie.net/send_mail/send_mail.php', {
+        method: 'POST',
+        body: data
+      });
 
-    cleanInputs(){
-      this.name = '';
-      this.email = '';
-      this.message = '';
-    }
-
-    scrollToTarget(target: string) {
-      const element = document.getElementById(target);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      if (response.ok) {
+        this.cleanInputs();
+        this.finishSending();
+      } else {
+        console.error('Error sending mail:', response.statusText);
       }
+    } catch (error) {
+      console.error('Error sending mail:', error);
     }
- 
+  }
+
+  finishSending() {
+    this.sendingOk = true;
+    setTimeout(() => {
+      this.sendingOk = false;
+      this.isSending = false;
+    }, 3000);
+  }
+
+  cleanInputs() {
+    this.name = '';
+    this.email = '';
+    this.message = '';
+  }
+
+  scrollToTarget(target: string) {
+    const element = document.getElementById(target);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

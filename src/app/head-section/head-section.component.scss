@@ -139,8 +139,8 @@
     }
 
     .imgBg{
-        height: 70vh;
-         width: 70vh;
+        height: 110vh;
+         width: 110vh;
     }
 
     .herosection{
@@ -156,8 +156,10 @@
         right: unset;
         transform: translateX(-50%);
         font-size: 7vh;
+        color: white;
         .hello{
             font-weight: 100; font-size: 4.5vh;
+            color: white;
         }
     }
     
@@ -175,8 +177,13 @@
         font-size: 11vw;
         .hello{
             
-            font-size: 7.5vw;
+            font-size: 7.0vw;
         }
+    }
+
+    .imgBg{
+        height: 80vh;
+         width: 80vh;
     }
     
 }

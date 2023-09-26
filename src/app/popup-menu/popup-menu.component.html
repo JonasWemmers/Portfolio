@@ -1,6 +1,6 @@
 
 <img class="menuIcon" src="assets/img/SimpleLineIconsMenu.svg" (click)="toggleMenu()">
-<div class="popupMenu" [ngClass]="{'showMenu': isOpen}">
+<div class="popupMenu" [class.showMenu]="isOpen">
     <a (click)="scrollToTarget('aboutMe'); toggleMenu()">About me</a>
     <a (click)="scrollToTarget('skillset'); toggleMenu()">Skill set</a>
     <a (click)="scrollToTarget('projects'); toggleMenu()">My work</a>

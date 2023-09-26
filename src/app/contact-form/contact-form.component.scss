@@ -34,16 +34,20 @@
             justify-content: center;
             input{
                 width: 40vw;
+                text-align: center;
                 height: 30px;
                 border: 1px solid black;
                 border-radius: 10px;
+                font-family: 'Montserrat';
             }
             textarea{
                 border: 1px solid black;
+                text-align: center;
                 border-radius: 10px;
                 width: 40vw;
                 height: 150px;
                 resize: none;
+                font-family: 'Montserrat';
             }
             #btn{
                 height: 60px;

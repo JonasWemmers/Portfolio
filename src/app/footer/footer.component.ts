@@ -12,7 +12,8 @@ export class FooterComponent {
     const githubUrl = 'https://github.com/JonasWemmers';
     
     // Die Facebook-Seite aufrufen
-    window.location.href = githubUrl;
+    window.open(githubUrl, '_blank');
+
   }
 
   redirectToLinkedIn() {
@@ -20,6 +21,6 @@ export class FooterComponent {
     const linkedInUrl = 'https://www.linkedin.com/in/jonas-wemmers-a34083142/';
     
     // Die LinkedIn-Seite aufrufen
-    window.location.href = linkedInUrl;
+    window.open(linkedInUrl, '_blank');
   }
 }

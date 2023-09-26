@@ -16,7 +16,10 @@ export class PopupMenuComponent {
   }
 
   scrollToTarget(target: string) {
-    this.scroller.scrollToAnchor(target);
+    const element = document.getElementById(target);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   toggleMenu() {

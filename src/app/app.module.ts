@@ -14,6 +14,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MainPageComponent } from './main-page/main-page.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -43,6 +44,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     CommonModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes) // Hier füge die RouterModule-Konfiguration hinzu
